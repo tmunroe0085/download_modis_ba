@@ -31,7 +31,7 @@ for year in years:
 
             print(file_name)
 
-            cmd = ['wget', '--ftp-user=user', --ftp-password=burnt_data', '-O ', outpath, file_name]
+            cmd = ['wget', '--ftp-user=user', '--ftp-password=burnt_data', '-O ', outpath, file_name]
             subprocess.check_call(cmd)
 
             image_list.append(outname)
