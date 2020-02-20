@@ -31,7 +31,7 @@ for year in years:
 
             print(file_name)
 
-            cmd = ['wget', '--ftp-user=user', '--ftp-password=burnt_data', "-O", outpath, file_name]
+            cmd = ['wget', '--ftp-user=user', '--ftp-password=burnt_data', file_name, "-O", outpath]
             subprocess.check_call(cmd, shell=True)
 
             image_list.append(outname)
@@ -53,5 +53,3 @@ for year in years:
     cmd4 = ['aws', 's3', 'mv', outfolder, s3_path, '--recursive']
     subprocess.check_call(cmd4, shell=True)
 
-    # cmd5 = ['aws', 's3', 'mv', mosaic_file, r"s3://gfw-files/tmunroe/burn_scars/mosaics/"]
-    # subprocess.check_call(cmd5, shell=True)
